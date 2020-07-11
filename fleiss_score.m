@@ -3,7 +3,7 @@
 %      
 %     Inputs:
 %           X - square data matrix
-%           alpha = Confidence Level
+%           alpha = Significance Level
 %     Outputs:
 %           - Overall Fleiss Kappa value (score)
 %           - Percent Overall Agreement (p_bar)
