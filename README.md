@@ -10,7 +10,8 @@ This tool was created by Jenil Shah for usage in DEVIATE Research @UMTRI to calc
 
 # Usage & Examples
 
-The tool expects the annotations as a nxm matrix where n = number of labellers & m = frames. The {i,j} represents the category {1,2,3,4...} the ith labeller put for the jth frame. Note: Do not put 0 as a category.
+The tool expects the annotations as a nxm matrix where n = number of labellers & m = frames. The (i,j) entry represents the category {1,2,3,4...} the ith labeller put for the jth frame. <br>
+Note: Do not put 0 as a category.
 
 Example input: <br>
 Following is an Annotation Matrix for: 3 labellers annotate 9 frames for Head Position {3: Midline, 4: Weak Up, 5: Strong Up} <br><br>
