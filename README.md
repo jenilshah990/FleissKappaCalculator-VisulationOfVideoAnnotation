@@ -53,6 +53,10 @@ Substantial agreement by Landis & Koch(1997)
 Reject null hypotesis: Observed agreement is not accidental
 ```
 # Licenses 
-MIT Licence
+MIT License
+
+Copyright (c) 2020 jenilshah990
 # Contributors
-@Jenil Shah
+```
+Cite As:
+Jenil Shah (2020). Fleiss Kappa Calculator & Visualisation of Video Annotations (https://github.com/jenilshah990/FleissKappaCalculator/releases/tag/1.1.0), GitHub. Retrieved July 11, 2020.
