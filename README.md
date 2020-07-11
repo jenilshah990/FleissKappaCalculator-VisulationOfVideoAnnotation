@@ -41,8 +41,16 @@ Visualisation of Frame labels into categories by multiple Labellers: <br>
 Fleiss Kappa Outputs: 
 
 ```
-Percent Overall Agreement: 0.9640
-Overall Fleiss Kappa Score: 0.9035
+Percent Overall Agreement: 0.7613
+Overall Fleiss Kappa Score: 0.6045
+Substantial agreement by Landis & Koch(1997)
+
+    Fleiss_Kappa    Std_Error    Confidence_Interval     z      p_value
+    ____________    _________    ___________________    ____    _______
+
+       0.6045       0.042272     0.58252    0.62648     14.3       0   
+
+Reject null hypotesis: Observed agreement is not accidental
 ```
 
 Created By:
