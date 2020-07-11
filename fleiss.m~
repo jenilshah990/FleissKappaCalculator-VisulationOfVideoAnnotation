@@ -1,0 +1,29 @@
+% Syntax: 	fleiss(k, X, alpha)
+%      
+%     Inputs:
+%           k = number of labellers
+%           X = square data matrix the annotations as a nxm matrix 
+%               where n = number of labellers & m = frames. The (i,j) entry represents the category {1,2,3,4...} the ith labeller put for the jth frame. 
+%           alpha = Confidence Level
+%
+%     Outputs:
+%           - 
+%           - Overall Fleiss Kappa value (score)
+%           - Percent Overall Agreement (p_bar)
+%           - Kappa standard error
+%           - Kappa confidence interval
+%           - Kappa benchmarks by Landis and Koch 
+%           - z test & P Value
+
+
+function fleiss(k, matrix, alpha) 
+visualisation(matrix,k);
+F = Create_Fleiss_Matrix(k,matrix);
+y = fleiss_score(F,alpha);
+end
+
+
+
+
+    
+
