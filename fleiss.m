@@ -6,7 +6,7 @@
 %               where n = number of labellers & m = frames. 
 %               The (i,j) entry represents the category {1,2,3,4...} the 
 %               ith labeller put for the jth frame. 
-%           alpha = Confidence Level
+%           alpha = significance level
 %
 %     Outputs:
 %           - Visualisation of The Annotation Matrix
