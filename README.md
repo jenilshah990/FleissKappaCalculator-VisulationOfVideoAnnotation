@@ -22,7 +22,7 @@ Following is an Annotation Matrix for: 3 labellers annotate 9 frames for Head Po
 
 To create the visualisationn & calculate the Fleiss Kappa Value:
 ```
-fleiss(#Number of Labellers, AnnotationMatrix);
+fleiss(#Number of Labellers, AnnotationMatrix, Significance Level);
 ```
 To only create the Fleiss Kappa Matrix:
 ```
@@ -30,7 +30,7 @@ Create_Fleiss_Matrix(#Number of Labellers, AnnotationMatrix);
 ```
 To only calculate Fleiss Kappa Score from Fleiss Kappa Matrix:
 ```
-fleiss_score(FleissKappaMatrix);
+fleiss_score(FleissKappaMatrix, Significance Level);
 ```
 
 <b> Outputs:</b> 
