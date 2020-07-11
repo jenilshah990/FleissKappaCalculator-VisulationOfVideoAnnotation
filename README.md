@@ -6,7 +6,7 @@ This tool was created by Jenil Shah for usage in DEVIATE Research @UMTRI to calc
 
 1.) Create a Visualisation for the Labelled Matrix to get a clearer understanding of the labellings. <br> 
 2.) Converts a labelled video matrix into a Fleiss Matrix. <br>
-3.) Calculate the Overall Fleiss Kappa Score & Percent Overall Agreement among raters above chance.
+3.) Calculate the Overall Fleiss Kappa Score, Percent Overall Agreement among raters above chance, Confidence Interval of Kappa & Siginificance Test of Kappas.
 
 # Usage & Examples
 
