@@ -5,9 +5,7 @@ Fleiss' kappa (named after Joseph L. Fleiss) is a statistical measure for assess
 This tool was created by Jenil Shah for usage in DEVIATE Research @UMTRI to calculate the inter-rater reliability for annotated videos due to absence of any existing tool. The tool does the following:
 
 1.) Create a Visualisation for the Labelled Matrix to get a clearer understanding of the labellings. 
-
 2.) Converts a labelled video matrix into a Fleiss Matrix 
-
 3.) Calculate the Overall Fleiss Kappa Score & Percent Overall Agreement among raters above chance.
 
 
