@@ -13,12 +13,12 @@ This tool was created by Jenil Shah for usage in DEVIATE Research @UMTRI to calc
 The tool expects the annotations as a nxm matrix where n = number of labellers & m = frames. The (i,j) entry represents the category {1,2,3,4...} the ith labeller put for the jth frame. <br>
 Note: Do not put 0 as a category.
 
-<b>Example input:<b> 
+<b>Example input:</b> 
   
 Following is an Annotation Matrix for: 3 labellers annotate 9 frames for Head Position {3: Midline, 4: Weak Up, 5: Strong Up} <br><br>
 ![What is this](AnnotationMatrix.png)
 
-<b> Usage: <b>
+<b> Usage: </b>
 
 To create the visualisationn & calculate the Fleiss Kappa Value:
 ```
@@ -33,7 +33,7 @@ To only calculate Fleiss Kappa Score from Fleiss Kappa Matrix:
 fleiss_score(FleissKappaMatrix);
 ```
 
-<b> Outputs:<b> 
+<b> Outputs:</b> 
   
 Visualisation of Frame labels into categories by multiple Labellers: <br> 
 ![What is this](VisualisationExample.png)
