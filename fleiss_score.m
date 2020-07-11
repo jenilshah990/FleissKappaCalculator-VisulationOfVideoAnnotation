@@ -66,8 +66,8 @@ end
 T=table(kappa,std_error,ci,z,p,'VariableNames',{'Fleiss_Kappa', 'Std_Error', 'Confidence_Interval','z','p_value'});
 disp(T)
 if p<alpha
-    disp('Reject null hypotesis: Observed agreement is not accidental')
+    disp('Reject null hypothesis: Observed agreement is not accidental')
 else
-    disp('Accept null hypotesis: Observed agreement is accidental')
+    disp('Accept null hypothesis: Observed agreement is accidental')
 end
 end
