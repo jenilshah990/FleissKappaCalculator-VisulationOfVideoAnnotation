@@ -52,6 +52,7 @@ Substantial agreement by Landis & Koch(1997)
 
 Reject null hypotesis: Observed agreement is not accidental
 ```
-
-#Contributors
+# Licenses 
+MIT Licence
+# Contributors
 @Jenil Shah
