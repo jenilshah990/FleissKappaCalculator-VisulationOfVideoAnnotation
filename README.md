@@ -1,5 +1,5 @@
 [![View Fleiss Kappa Calculator & Visualisation of Video Annotations on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/78023-fleiss-kappa-calculator-visualisation-of-video-annotations)
-# Fleiss Kappa Score & Visualisation of Video Annotations
+# Fleiss Kappa Calculator & Visualisation of Video Annotations
 
 Fleiss' kappa (named after Joseph L. Fleiss) is a statistical measure for assessing the reliability of agreement between a fixed number of raters when assigning categorical ratings to a number of items or classifying items. Fleiss' kappa works for any number of raters giving categorical ratings, to a fixed number of items. It can be interpreted as expressing the extent to which the observed amount of agreement among raters exceeds what would be expected if all raters made their ratings completely randomly.
 
