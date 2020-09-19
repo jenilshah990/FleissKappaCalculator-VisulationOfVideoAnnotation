@@ -21,6 +21,7 @@
 
 function fleiss(k, matrix, alpha) 
 visualisation(matrix,k);
+%CAUTION: This line assumes you put 10 as unlabelled in your matrix. Done for the approved implementation in DEVIATE. 
 matrix(matrix(:) == 10) = k; %Changes the values of unlabelled ie. 10 to the last category ie. k
 F = Create_Fleiss_Matrix(k,matrix);
 y = fleiss_score(F,alpha);
