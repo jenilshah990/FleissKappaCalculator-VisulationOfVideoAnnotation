@@ -24,8 +24,8 @@ n=sum(x(1,:)); %raters
 a=n*N; %Sum of all cells
 
 %Calculate pj & pe_bar
-pj=(sum(x)./(a));  
-pe_bar = sum(pj.^2);
+pj=(sum(x,1)./(a));  %Calculates sum of each column & then divides by a
+pe_bar = sum(pj.^2); %Square each entry in pj & then sum
 
 %Calculate Pi & p_bar
 pi = (sum(x.^2,2) - n)./(n*(n-1));
@@ -50,7 +50,6 @@ fprintf('Percent Overall Agreement: %0.4f\n%p_bar', p_bar);
 fprintf('Overall Fleiss Kappa Score: %0.4f\n', kappa);
 
 if kappa<0
-    cprintf('Red');
     fprintf('Poor agreement by Landis & Koch(1997)\n\n');
 elseif kappa>=0 && kappa<=0.2
     fprintf('Slight agreement by Landis & Koch(1997)\n\n');
