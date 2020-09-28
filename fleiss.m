@@ -1,12 +1,12 @@
 % Syntax: 	fleiss(k, X, alpha)
 %      
 %     Inputs:
-%           k = number of labellers
+%           k = number of categories
 %           X = square data matrix the annotations as a nxm matrix 
 %               where n = number of labellers & m = frames. 
 %               The (i,j) entry represents the category {1,2,3,4...} the 
 %               ith labeller put for the jth frame. 
-%           alpha = significance level
+%           alpha = Significance Level
 %
 %     Outputs:
 %           - Visualisation of The Annotation Matrix
@@ -19,16 +19,10 @@
 %           - z test & P Value
 
 
-function fleiss(k, matrix, alpha) 
-visualisation(matrix,k);
-%CAUTION: This line assumes you put 10 as unlabelled in your matrix. Done for the approved implementation in DEVIATE. 
-matrix(matrix(:) == 10) = k; %Changes the values of unlabelled ie. 10 to the last category ie. k
+function fleiss(k, matrix, alpha)
+n=size(matrix, 1); %Number of Labellers
+matrix(matrix(:) == 10) = k; %Changing 10 to highest value k
+visualisation(matrix,n); 
 F = Create_Fleiss_Matrix(k,matrix);
-y = fleiss_score(F,alpha);
+fleiss_score(F,alpha);
 end
-
-
-
-
-    
-
