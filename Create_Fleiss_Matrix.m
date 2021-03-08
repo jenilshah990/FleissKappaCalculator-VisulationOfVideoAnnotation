@@ -1,4 +1,4 @@
-%Create a Fleiss Kappa Matrix from the Labelling Data
+% Create a Fleiss Kappa Matrix from the Labelling Data
 % k: Number of categories
 % matrix: Matrix of Labelled Data 
 
