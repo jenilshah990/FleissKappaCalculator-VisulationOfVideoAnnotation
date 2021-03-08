@@ -12,7 +12,7 @@
 %           - Kappa benchmarks by Landis and Koch 
 %           - z test & P Value
 
-function [kappa, std_error, ci, z, p] = fleiss_score(x, alpha)
+function [kappa, std_error, ci, z, p] = fleiss_score(x, alpha, label, video_name)
 %check if the raters are the same for each rows
 r=sum(x,2);
 if any(r-max(r))
@@ -45,28 +45,43 @@ ci =kappa + ([-1 1].*(abs(normcdf(alpha))*std_error));
 z = kappa/std_error;
 p=(1-normcdf(abs(z)))*2;
 
+%Write to results folder in separate .txt file
+filePath = strcat(video_name, "-results", '/', 'results.txt');
+fileID = fopen([filePath], 'at');
+
 %Display Results
-fprintf('Percent Overall Agreement: %0.4f\n%p_bar', p_bar); 
-fprintf('Overall Fleiss Kappa Score: %0.4f\n', kappa);
+fprintf(fileID, 'Label: ');
+fprintf(fileID, label);
+fprintf(fileID, '\n');
+fprintf(fileID, 'Percent Overall Agreement: %0.4f\n%p_bar', p_bar); 
+fprintf(fileID, 'Overall Fleiss Kappa Score: %0.4f\n', kappa);
 
 if kappa<0
-    fprintf('Poor agreement by Landis & Koch(1997)\n\n');
+    fprintf(fileID, 'Poor agreement by Landis & Koch(1997)\n\n');
 elseif kappa>=0 && kappa<=0.2
-    fprintf('Slight agreement by Landis & Koch(1997)\n\n');
+    fprintf(fileID, 'Slight agreement by Landis & Koch(1997)\n\n');
 elseif kappa>0.2 && kappa<=0.4
-    fprintf('Fair agreement by Landis & Koch(1997)\n\n');
+    fprintf(fileID, 'Fair agreement by Landis & Koch(1997)\n\n');
 elseif kappa>0.4 && kappa<=0.6
-    fprintf('Moderate agreement by Landis & Koch(1997)\n\n');
+    fprintf(fileID, 'Moderate agreement by Landis & Koch(1997)\n\n');
 elseif kappa>0.6 && kappa<=0.8
-    fprintf('Substantial agreement by Landis & Koch(1997)\n\n');
+    fprintf(fileID, 'Substantial agreement by Landis & Koch(1997)\n\n');
 elseif kappa>0.8 && kappa<=1
-    fprintf('Perfect agreement by Landis & Koch(1997)\n\n');
+    fprintf(fileID, 'Perfect agreement by Landis & Koch(1997)\n\n');
 end
-T=table(kappa,std_error,ci,z,p,'VariableNames',{'Fleiss_Kappa', 'Std_Error', 'Confidence_Interval','z','p_value'});
-disp(T)
+varNames = {'Fleiss_Kappa', 'Std_Error', 'Confidence_Interval','z','p_value'};
+data = {kappa,std_error,ci,z,p};
+%T=table(kappa,std_error,ci,z,p,'VariableNames',{'Fleiss_Kappa', 'Std_Error', 'Confidence_Interval','z','p_value'});
+%disp(T)
+fprintf(fileID, '%s\t%s\t%s\t\t%s\t\t%s\n', varNames{:});
+fprintf(fileID, '%d\t%d\t%d\t%d\t%d\t%d\n', data{:});
+fprintf(fileID, '\n');
 if p<alpha
-    disp('Reject null hypothesis: Observed agreement is not accidental')
+    %disp('Reject null hypothesis: Observed agreement is not accidental');
+    fprintf(fileID, 'Reject null hypothesis: Observed agreement is not accidental\n\n');
 else
-    disp('Accept null hypothesis: Observed agreement is accidental')
+    %disp('Accept null hypothesis: Observed agreement is accidental');
+    fprintf(fileID, 'Accept null hypothesis: Observed agreement is accidental\n\n');
+fclose(fileID);
 end
 end
